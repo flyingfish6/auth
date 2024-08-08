@@ -28,7 +28,7 @@ const Navbar = async () => {
           ) : (
             <>
               <div className="flex items-center gap-x-2 text-sm">
-                {session?.user?.name}
+                {session?.user?.name}{" "}
                 {session?.user?.image && (
                   <Image
                     className="rounded-full"

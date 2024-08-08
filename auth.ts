@@ -44,12 +44,14 @@ export const {
         });
 
         if (!user) {
-          user = await db.user.create({
-            data: {
-              email,
-              hashedPassword: hash,
-            },
-          });
+          // user = await db.user.create({
+          //   data: {
+          //     email,
+          //     hashedPassword: hash,
+          //   },
+          // });
+
+          throw new Error("can't find user.");
         } else {
           const isMatch = bcrypt.compareSync(
             credentials.password as string,
